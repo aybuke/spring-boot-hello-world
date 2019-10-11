@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Run') { 
             steps {
-                sh 'java -jar spring-boot-hello-world-1.0-SNAPSHOT.jar' 
+                sh 'java -jar target/spring-boot-hello-world-1.0-SNAPSHOT.jar' 
             }
         }
     }
