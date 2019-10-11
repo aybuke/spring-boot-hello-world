@@ -2,7 +2,7 @@ pipeline {
     agent {
     docker {
       image 'zenika/alpine-maven'
-      args '-u root:root'
+      args '-u root:root -p 8080:8888'
     }
   }
     stages {
