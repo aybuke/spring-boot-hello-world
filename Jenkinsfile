@@ -1,10 +1,11 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3-alpine' 
+            image 'zenika/alpine-maven' 
             args '-v /root/.m2:/root/.m2' 
         }
     }
+    
     stages {
         stage('Build') { 
             steps {
