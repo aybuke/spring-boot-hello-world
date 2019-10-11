@@ -11,5 +11,11 @@ pipeline {
                 sh 'mvn clean install' 
             }
         }
+        stage('Run') { 
+            steps {
+                sh 'java -jar spring-boot-hello-world-1.0-SNAPSHOT.jar' 
+            }
+        }
     }
+    
 }
