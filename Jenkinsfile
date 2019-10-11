@@ -1,11 +1,10 @@
 pipeline {
     agent {
-        docker {
-            image 'zenika/alpine-maven' 
-            args '-v /root/.m2:/root/.m2' 
-        }
+    docker {
+      image 'zenika/alpine-maven'
+      args '-u root:root -v /var/run/docker.sock:/var/run/docker.sock'
     }
-    
+  }
     stages {
         stage('Build') { 
             steps {
